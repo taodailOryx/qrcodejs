@@ -1,0 +1,14 @@
+body {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.input {
+  width: 80vw;
+}
+
+@media print {
+  .input {
+    display: none;
+  }
+}
