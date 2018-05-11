@@ -3,12 +3,21 @@ body {
   flex-flow: column nowrap;
 }
 
-.input {
+.input,
+.label {
   width: 80vw;
+}
+
+.elem {
+	margin-top: 10px;
 }
 
 @media print {
   .input {
     display: none;
+  }
+
+  .label {
+  	border: none;
   }
 }
