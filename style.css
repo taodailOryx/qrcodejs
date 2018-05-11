@@ -8,6 +8,10 @@ body {
   width: 80vw;
 }
 
+.input {
+	height: 100px;
+}
+
 .elem {
 	margin-top: 10px;
 }
