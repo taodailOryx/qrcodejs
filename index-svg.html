@@ -1,5 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ko" lang="ko">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
   <head>
     <title>Cross-Browser QRCode generator for Javascript</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -9,13 +9,25 @@
     <script type="text/javascript" src="qrcode.js"></script>
   </head>
   <body>
+    <!--
     <input id="text" class="elem input" type="text" value="http://jindo.dev.naver.com/collie" />
+    -->
+    <textarea id="text" class="elem input" type="text" rows="6">PC Name:&nbsp;
+Windows:&nbsp;
+Win Key:&nbsp;
+Office:&nbsp;
+Office Key:&nbsp;
+SN:&nbsp;</textarea>
+    <!--
     <br />
     <div class="elem output">
+    -->
+    <div id="qrcode" class="elem output">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g id="qrcode"/>
       </svg>
     </div>
+    <input id="text" class="elem label" type="text" value="PC Name:" />
     <script type="text/javascript">
       var qrcode = new QRCode(document.getElementById("qrcode"), {
         width : 100,
@@ -39,13 +51,16 @@
 
       $("#text").
           on("blur", function () {
-              makeCode();
-          }).
-          on("keydown", function (e) {
-              if (e.keyCode == 13) {
-                  makeCode();
-              }
+            makeCode();
           });
+        /* Removed generate code on Enter keydown for multiline input
+        .
+        on("keydown", function (e) {
+          if (e.keyCode == 13) {
+            makeCode();
+          }
+        });
+        */
     </script>
   </body>
 </html>

@@ -12,14 +12,15 @@
   	<!--
     <input id="text" class="elem input" type="text" value="http://jindo.dev.naver.com/collie" />
   	-->
-    <textarea id="text" class="elem input" type="text" />PC Name:
-Windows:
-Win Key:
-Office:
-Office Key:
-SN: </textarea>
-    <div id="qrcode" class="elem output" style="width:150px; height:150px; margin-top:15px;">
+    <textarea id="text" class="elem input" type="text" rows="6">PC Name:&nbsp;
+Windows:&nbsp;
+Win Key:&nbsp;
+Office:&nbsp;
+Office Key:&nbsp;
+SN:&nbsp;</textarea>
+    <div id="qrcode" class="elem output">
     </div>
+    <input id="text" class="elem label" type="text" value="PC Name:" />
     <script type="text/javascript">
       var qrcode = new QRCode(document.getElementById("qrcode"), {
         width : 150,
@@ -53,6 +54,5 @@ SN: </textarea>
         });
         */
     </script>
-    <input id="text" class="elem label" type="text" value="PC Name:" />
   </body>
 </html>

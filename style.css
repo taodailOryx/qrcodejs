@@ -16,6 +16,12 @@ body {
 	margin-top: 10px;
 }
 
+.output {
+  width: 150px;
+  height: 150px;
+  margin-top: 15px;
+}
+
 @media print {
   .input {
     display: none;
